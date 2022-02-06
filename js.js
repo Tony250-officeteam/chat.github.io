@@ -64,7 +64,7 @@ function showAllData() {//从数据库中提取留言信息
 function addData(name, msg, time) {//向数据库中添加数据
 	db.transaction(function (tx) {
 		tx.executeSql('INSERT INTO MsgData VALUES(?,?,?)', [name, msg, time], function (tx, result) {
-				alert("留言成功");
+				//alert("留言成功");
 			},
 			function (tx, error) {//添加失败提示
 				alert(error.source + ':' + error.message);
